@@ -6,9 +6,10 @@ module.exports = function(app){
     	res.redirect('/gallery');
     });
     app.use('/gallery',require('./gallery'));
-    // app.use(function(req,res){
-    //     if(!res.headersSent){
-    //         res.status(404).render('404');
-    //     }
-    // })
+    app.use('/music',require('./music'));
+    app.use(function(req,res){
+        if(!res.headersSent){
+            res.status(404).render('404');
+        }
+    })
 };

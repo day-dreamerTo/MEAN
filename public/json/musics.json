@@ -1,0 +1,52 @@
+[
+  {
+    "mp3":"/music/林俊杰 - 突然累了.mp3",
+    "title":"突然累了",
+    "artist":"林俊杰",
+    "rating":4,
+    "buy":"#",
+    "price":"0.00",
+    "duration":"04:08",
+    "cover":"/img/bg-02.jpg"
+  },
+  {
+    "mp3":"/music/五音Jw - 明月天涯.mp3",
+    "title":"明月天涯",
+    "artist":"五音Jw",
+    "rating":4,
+    "buy":"#",
+    "price":"0.00",
+    "duration":"04:02",
+    "cover":"/img/bg-02.jpg"
+  },
+  {
+    "mp3":"/music/麦田 - 纯音乐.mp3",
+    "title":"麦田",
+    "artist":"未知",
+    "rating":5,
+    "buy":"#",
+    "price":"0.00",
+    "duration":"04:04",
+    "cover":"/img/bg-02.jpg"
+  },
+  {
+    "mp3":"/music/1945完整演奏版 - 海角七号.mp3",
+    "title":"1945完整演奏版",
+    "artist":"未知",
+    "rating":5,
+    "buy":"#",
+    "price":"0.00",
+    "duration":"03:50",
+    "cover":"/img/bg-02.jpg"
+  },
+  {
+    "mp3":"/music/一声佛号一声心 - 佛教音乐.mp3",
+    "title":"一声佛号一声心",
+    "artist":"未知",
+    "rating":5,
+    "buy":"#",
+    "price":"0.00",
+    "duration":"11:42",
+    "cover":"/img/bg-02.jpg"
+  }
+]

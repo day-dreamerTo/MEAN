@@ -44,6 +44,7 @@ app.use(function(req,res,next){
 	res.locals.loading = req.flash('loading').toString();
 	next();
 });
+
 routes(app);
 
 app.use(function(err,req,res,next){

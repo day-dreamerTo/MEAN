@@ -1,0 +1,39 @@
+<%- include('header') %>
+<div class="dimmed pusher">
+    <%- include('components/menu') %>
+    <div class="ui special cards four">
+        <% imgs.forEach(function(img){ %>
+        <div class="card">
+            <div class="blurring dimmable image">
+                <div class="ui dimmer">
+                    <div class="content">
+                        <div class="center">
+                            <div class="ui inverted button">
+                                <a href="/gallery/<%= img._id %>/remove">Delete</a>
+                            </div>
+                            <div class="ui inverted button">
+                                <a href="/gallery/<%= img._id %>/edit">Edit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img class="gallery-img" src="/img/<%= img.url %>">
+            </div>
+            <div class="content">
+                <a class="header img-title" href="#"><%= img.title %></a>
+                <div class="meta">
+                    <span class="date">Create in <%= img.create_at %></span>
+                    <p class="description">
+                        <%= img.description%>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>
+<div class="ui modal">
+    <img src="" alt="">
+</div>
+<script src="/js/gallery.js"></script>
+<%- include('footer') %>

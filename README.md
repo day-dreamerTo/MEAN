@@ -1,2 +1,2 @@
-# MEAN
-mongdb+express+angular+nodejs
+# MEME
+mongdb+express+mongodb+ejs

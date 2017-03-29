@@ -1,0 +1,31 @@
+<%- include('header') %>
+<%- include('components/notification') %>
+<div class="dimmed pusher">
+    <% if(loading){ %>
+    <div class="ui grid form loading">
+        <% } %>
+        <%  { %>
+        <div class="ui grid form">
+            <% } %>
+            <div class="four wide column"></div>
+            <div class="eight wide column">
+                <form class="ui form segment" method="post" enctype="multipart/form-data">
+                    <div class=" field required">
+                        <label>title</label>
+                        <input placeholder="title" type="text" name="title">
+                    </div>
+                    <div class="field required">
+                        <label>picture</label>
+                        <input type="file" class="ui button" name="picture">
+                    </div>
+                    <div class=" field required">
+                        <label>description</label>
+                        <textarea name="description" rows="5"></textarea>
+                    </div>
+                    <input type="submit" class="ui button fluid" value="upload">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('footer') %>

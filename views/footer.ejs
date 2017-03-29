@@ -1,0 +1,12 @@
+    </body>
+    <script>
+        $('.special.cards .image').dimmer({
+            on: 'hover'
+        });
+        $('.ui.dropdown').dropdown();
+        $('.backgrounds .item').click(function(){
+            var val = $(this).attr('data-value');
+            $('body').css('background-image','url("../img/bg-0'+ val +'.jpg")');
+        });
+    </script>
+</html>

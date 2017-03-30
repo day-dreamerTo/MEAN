@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>mysite</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./public/css/musicplayer.css">
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./public/js/semantic.min.js"></script>
+    <script src="./public/plugin/jquery-jplayer/jquery.jplayer.js"></script>
+    <script src="./public/js/ttw-music-player-min.js"></script>
+</head>
+<body>
+<div class="dimmed pusher">
+    <div id="player"></div>
+</div>
+<script>
+    $(document).ready(function(){
+    	$.ajax({
+    		url:'./public/json/musics.json',
+    		type:'get',
+    		dataType:'json',
+    		success:function(result){
+    			console.log(result);
+    			var myPlaylist = result;
+	            $('body').ttwMusicPlayer(myPlaylist, {
+	                autoPlay:false,
+	                description:'',
+	                jPlayer:{
+	                    swfPath:'./public/plugin/jquery-jplayer'
+	                }
+	            });
+    		},
+    		error:function(e){
+    			console.log(e)
+    		}
+    	});
+    });
+</script>
+</body>
+</html>

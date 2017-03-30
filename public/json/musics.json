@@ -48,5 +48,35 @@
     "price":"0.00",
     "duration":"11:42",
     "cover":"/img/bg-02.jpg"
+  },
+  {
+    "mp3":"/music/安妮的仙境 - 班得瑞.mp3",
+    "title":"安妮的仙境",
+    "artist":"班得瑞",
+    "rating":5,
+    "buy":"#",
+    "price":"0.00",
+    "duration":"03:29",
+    "cover":"/img/bg-02.jpg"
+  },
+  {
+    "mp3":"/music/百鬼夜行抄 - 森英治.mp3",
+    "title":"百鬼夜行抄",
+    "artist":"森英治",
+    "rating":5,
+    "buy":"#",
+    "price":"0.00",
+    "duration":"03:27",
+    "cover":"/img/bg-02.jpg"
+  },
+  {
+    "mp3":"/music/悲伤回流 - 纯音乐.mp3",
+    "title":"悲伤回流",
+    "artist":"未知",
+    "rating":5,
+    "buy":"#",
+    "price":"0.00",
+    "duration":"04:20",
+    "cover":"/img/bg-02.jpg"
   }
 ]

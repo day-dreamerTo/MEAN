@@ -1,26 +1,31 @@
 <div class="ui sidebar vertical menu left thin visible">
-  <% if(user) {%>
-  <h2 class="ui header"><img src="/img/<%= user.avatar %>" class="ui circular image"></h2>
-  <div class="item" style="margin-bottom:2rem">
-    <p><%= user.name %> | <%= ({m: '男', f: '女', x: '保密'})[user.gender] %></p>
-    <p class=""><%= user.bio %></p>
-  </div>
-  <% } %>
-  <a class="item" href="/gallery">
-    <i class="file image outline icon"></i> Gallery
-  </a>
-    <a class="item" href="/music">
-     <i class="music icon"></i> Music
-    </a>
-  <div class="ui selection dropdown" style="border:none;">
-    <input type="hidden" name="gender">
-    <i class="dropdown icon"></i>
-    <div class="default text">Themes</div>
-    <div class="menu backgrounds">
-      <div class="item" data-value="1">背景1</div>
-      <div class="item" data-value="2">背景2</div>
-      <div class="item" data-value="3">背景3</div>
-      <div class="item" data-value="5">背景4</div>
+    <% if(user) { %>
+    <h2 class="ui header"><img src="/img/<%= user.avatar %>" class="ui circular image"></h2>
+    <div class="item" style="margin-bottom:2rem">
+        <p><%= user.name %> | <%= ({m: 'male', f: 'female', x: 'xx'})[user.gender] %></p>
+        <p class=""><%= user.bio %></p>
     </div>
-  </div>
+    <% } else { %>
+    <div class="item" style="margin-bottom:2rem">
+        <h3>day_dreamer</h3>
+        <p style="text-indent: 10px;">If you smile when no one else is around, you really mean it.</p>
+    </div>
+    <% } %>
+    <a class="item" href="/gallery">
+        <i class="file image outline icon"></i> My Gallery
+    </a>
+    <a class="item" href="/music">
+        <i class="music icon"></i>My Music
+    </a>
+    <div class="ui selection dropdown" style="border:none;">
+        <input type="hidden" name="gender">
+        <i class="dropdown icon"></i>
+        <div class="default text">My Themes</div>
+        <div class="menu backgrounds">
+            <div class="item" data-value="1">bg1</div>
+            <div class="item" data-value="2">bg2</div>
+            <div class="item" data-value="3">bg3</div>
+            <div class="item" data-value="5">bg4</div>
+        </div>
+    </div>
 </div>

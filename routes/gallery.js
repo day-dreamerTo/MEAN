@@ -56,7 +56,7 @@ router.post('/:imgId/edit',function(req,res,next){
 	var description = req.fields.description;
 	ImgModel.updateImg(imgId,title,description).then(function(){
 		req.flash('success','修改成功');
-		return res.redirect('back');
+		return res.redirect('/gallery');
 	}).catch(function(e){
 		req.flash('error','修改失败');
 		next(e);

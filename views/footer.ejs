@@ -1,10 +1,13 @@
 <script>
+    var val = localStorage.getItem('val');
+    $('body').css('background-image', 'url("../img/bg-0' + val + '.jpg")')
     $('.special.cards .image').dimmer({
         on: 'hover'
     });
     $('.ui.dropdown').dropdown();
     $('.backgrounds .item').click(function () {
         var val = $(this).attr('data-value');
+        localStorage.setItem('val',val);
         $('body').css('background-image', 'url("../img/bg-0' + val + '.jpg")');
     });
 </script>

@@ -1,6 +1,5 @@
 body{
     padding:10px;
-    background: url('../img/bg-02.jpg');
     background-size:cover;
 }
 .ui{
@@ -84,15 +83,14 @@ body{
     border: 1px solid #333;
     border-radius: 4px;
     padding: 4px 12px;
-    overflow: hidden;
     text-decoration: none;
     text-indent: 0;
     line-height: 20px;
 }
 .choose input {
     position: absolute;
-    right: 0;
-    top: 0;
+    left: 0;
+    top: 0.5rem;
     opacity: 0;
 }
 .choose:hover {

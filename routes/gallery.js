@@ -1,12 +1,13 @@
 var path = require('path');
 var express = require('express');
 var router = express.Router();
-var ImgModel = require('../modles/img');
+var ImgModel = require('../models/img');
 // var checkLogin = require('../middlewares/check').checkLogin;
 
-//图库
+//图库 搜索图片
 router.get('/',function(req,res,next){
-	ImgModel.getImgs().then(function(imgs){
+	var title = req.query.title;
+	ImgModel.getImgByTitle(title).then(function(imgs){
 		res.render('gallery',{imgs:imgs});
 	});
 });
@@ -17,7 +18,6 @@ router.get('/add',function(req,res,next){
 });
 //新增图片
 router.post('/add',function(req,res,next){
-	req.flash('loading','');
 	var title = req.fields.title;
 	var picture = req.files.picture.path.split(path.sep).pop();
 	var description = req.fields.description;
@@ -36,7 +36,7 @@ router.post('/add',function(req,res,next){
 	};
 	ImgModel.create(img).then(function(){
 		req.flash('success','新增成功');
-		return res.redirect('back');
+		return res.redirect('/gallery');
 	}).catch(function(e){
         req.flash('error',e.message);
 		next(e);
@@ -72,14 +72,5 @@ router.get('/:imgId/remove',function(req,res,next){
 			return res.redirect('back')
 	}).catch(next);
 });
-//搜索图片
-router.get('/search',function(req,res,next){
- 	res.render('search');
-});
-router.post('/search',function(req,res,next){
-	var title = req.fields.title;
-	ImgModel.getImgByTitle(title).then(function(imgs){
-		res.render('gallery',{imgs:imgs});
-	});
-});
+
 module.exports = router;

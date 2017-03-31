@@ -1,10 +1,12 @@
 <%- include('header') %>
 <div class="dimmed pusher">
     <%- include('components/menu') %>
+    <%- include('components/search') %>
     <div class="ui special cards four">
         <% imgs.forEach(function(img){ %>
         <div class="card">
             <div class="blurring dimmable image">
+                <% if(user) { %>
                 <div class="ui dimmer">
                     <div class="content">
                         <div class="center">
@@ -17,6 +19,7 @@
                         </div>
                     </div>
                 </div>
+                <% } %>
                 <img class="gallery-img" src="/img/<%= img.url %>">
             </div>
             <div class="content">

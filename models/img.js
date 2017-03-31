@@ -15,6 +15,7 @@ module.exports = {
     getImgById:function(imgId){
         return Img
             .find({_id:imgId})
+            .addCreatedAt()
             .exec();
     },
     getImgByTitle:function(title){
@@ -22,6 +23,7 @@ module.exports = {
         query['title'] = new RegExp(title);
         return Img
             .find(query)
+            .addCreatedAt()
             .exec();
     },
     updateImg:function(imgId,title,description){

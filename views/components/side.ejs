@@ -1,11 +1,18 @@
 <div class="ui sidebar vertical menu left thin visible">
+  <% if(user) {%>
+  <h2 class="ui header"><img src="/img/<%= user.avatar %>" class="ui circular image"></h2>
+  <div class="item" style="margin-bottom:2rem">
+    <p><%= user.name %> | <%= ({m: '男', f: '女', x: '保密'})[user.gender] %></p>
+    <p class=""><%= user.bio %></p>
+  </div>
+  <% } %>
   <a class="item" href="/gallery">
     <i class="file image outline icon"></i> Gallery
   </a>
     <a class="item" href="/music">
      <i class="music icon"></i> Music
     </a>
-  <div class="ui selection dropdown">
+  <div class="ui selection dropdown" style="border:none;">
     <input type="hidden" name="gender">
     <i class="dropdown icon"></i>
     <div class="default text">Themes</div>

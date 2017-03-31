@@ -1,6 +1,11 @@
-<div class="ui menu">
-    <div class="menu">
-        <a class="ui item" href="/gallery/search"> <i class="search link icon"></i> </a>
-        <a class="ui item" href="/gallery/add">add </a>
+<div class="ui secondary menu">
+    <a class="ui item" href="">Just look around!</a>
+    <div class="right menu">
+        <% if(user) { %>
+        <a class="ui item" href="/signout" style="text-decoration:underline">Logout </a>
+        <% } else {%>
+        <!--<a class="ui item" href="/signup">Sign Up </a>-->
+        <a class="ui item" href="/signin" style="text-decoration:underline">Sign In </a>
+        <% } %>
     </div>
 </div>

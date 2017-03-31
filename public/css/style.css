@@ -1,6 +1,6 @@
 body{
     padding:10px;
-    background-image: url('../img/bg-02.jpg');
+    background: url('../img/bg-02.jpg');
     background-size:cover;
 }
 .ui{
@@ -13,10 +13,13 @@ body{
     background:none !important;
 }
 .ui.dropdown .menu{
-    background:none !important;
+    background:rgba(255,255,255,0.8);
 }
 .ui.menu{
-    width:0%;
+    width:74.5%;
+}
+.ui.header{
+    padding-left:1.14285714rem;
 }
 .ui.message{
     margin-left: 10.7rem;
@@ -46,6 +49,9 @@ body{
 .ui.modal{
     height:80%;
 }
+.ui.dimmer{
+    background:rgba(0,0,0,.5)!important;
+}
 .modal img{
     width:100%;
     height:100%;
@@ -71,4 +77,35 @@ body{
 
 #download:hover{
     color:#fff;
+}
+.choose {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.choose input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.choose:hover {
+    border-color: #000;
+    color: #004974;
+    text-decoration: none;
+}
+.ui.form input:not([type]), .ui.form input[type=text], .ui.form input[type=email], .ui.form input[type=search], .ui.form input[type=password], .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=tel], .ui.form input[type=time], .ui.form input[type=url], .ui.form input[type=number]{
+    border: 1px solid #333;
+}
+.ui.form textarea{
+    border: 1px solid #333;
+}
+.ui.selection.dropdown{
+    border: 1px solid #333;
 }

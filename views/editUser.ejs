@@ -1,0 +1,19 @@
+<%- include('header') %>
+<%- include('components/notification') %>
+<div class="dimmed pusher">
+    <div class="column" style="width:50%;margin:0 auto">
+        <form class="ui form segment bgNone" method="post" enctype="multipart/form-data">
+            <div class="field required">
+                <label>用户名</label>
+                <input placeholder="用户名" type="text" name="name" value="<%= user.name %>">
+            </div>
+            <div class="field required">
+                <label>个人简介</label>
+                <textarea class="bgNone" name="bio" rows="5"><%= user.bio %></textarea>
+            </div>
+            <input type="submit" class="ui black basic button fluid" value="修改">
+        </form>
+    </div>
+</div>
+</div>
+<%- include('footer') %>

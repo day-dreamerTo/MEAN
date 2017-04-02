@@ -4,7 +4,10 @@
 var Img = require('../lib/mongo').Img;
 module.exports = {
     create:function(img){
-        return Img.create(img).exec();
+        return Img
+            .create(img)
+            .addCreatedAt()
+            exec();
     },
     getImgs:function(){
         return Img
@@ -15,7 +18,6 @@ module.exports = {
     getImgById:function(imgId){
         return Img
             .find({_id:imgId})
-            .addCreatedAt()
             .exec();
     },
     getImgByTitle:function(title){

@@ -5,16 +5,16 @@
     <div class="ui grid form">
         <div class="four wide column"></div>
         <div class="eight wide column">
-            <form class="ui form segment" method="post" enctype="multipart/form-data">
+            <form class="ui form segment bgNone" method="post" enctype="multipart/form-data">
                 <div class=" field required">
                     <label>title</label>
                     <input  type="text" name="title" value="<%= img.title %>">
                 </div>
                 <div class="field required">
                     <label>description</label>
-                    <textarea name="description" rows="5"><%= img.description %></textarea>
+                    <textarea class="bgNone" name="description" rows="5"><%= img.description %></textarea>
                 </div>
-                <input type="submit" class="ui button fluid" value="Edit">
+                <input type="submit" class="ui black basic button fluid" value="Edit">
             </form>
         </div>
     </div>

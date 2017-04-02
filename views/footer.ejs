@@ -1,6 +1,7 @@
+<div class="backdrop"></div>
 <script>
-    var val = localStorage.getItem('val');
-    $('body').css('background-image', 'url("../img/bg-0' + val + '.jpg")')
+    var val = localStorage.getItem('val') || 8;
+    $('.backdrop').css('background-image', 'url("/img/bgs/bg-0' + val + '.jpg")')
     $('.special.cards .image').dimmer({
         on: 'hover'
     });
@@ -8,7 +9,7 @@
     $('.backgrounds .item').click(function () {
         var val = $(this).attr('data-value');
         localStorage.setItem('val',val);
-        $('body').css('background-image', 'url("../img/bg-0' + val + '.jpg")');
+        $('.backdrop').css('background-image', 'url("/img/bgs/bg-0' + val + '.jpg")');
     });
 </script>
 </body>

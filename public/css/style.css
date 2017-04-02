@@ -1,82 +1,98 @@
-body{
-    padding:10px;
-    background-size:cover;
+body {
+    height: 100%;
+    padding: 10px;
 }
-.ui{
-    background:none !important;
+
+.backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-size: cover;
+    -webkit-filter: blur(7px);
 }
-.ui.form textarea{
-    background:none !important;
+
+.bgNone {
+    background: none !important;
 }
-.ui.form input:not([type]), .ui.form input[type=text], .ui.form input[type=email], .ui.form input[type=search], .ui.form input[type=password], .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=tel], .ui.form input[type=time], .ui.form input[type=url], .ui.form input[type=number]{
-    background:none !important;
+
+.ui.form input:not([type]), .ui.form input[type=text], .ui.form input[type=email], .ui.form input[type=search], .ui.form input[type=password], .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=tel], .ui.form input[type=time], .ui.form input[type=url], .ui.form input[type=number] {
+    background: none !important;
 }
-.ui.dropdown .menu{
-    background:rgba(255,255,255,0.8);
+
+.ui.menu {
+    width: 74.5%;
 }
-.ui.menu{
-    width:74.5%;
+
+.ui.header {
+    padding-left: 1.14285714rem;
 }
-.ui.header{
-    padding-left:1.14285714rem;
-}
-.ui.message{
+
+.ui.message {
     margin-left: 10.7rem;
-    /*display:none;*/
 }
-.ui.message p{
-    text-align:center;
+
+.ui.message p {
+    text-align: center;
 }
-.ui.message:last-child{
-    margin-bottom:1rem;
+
+.ui.message:last-child {
+    margin-bottom: 1rem;
 }
-.pusher{
-    padding-right:10.7rem;
+
+.pusher {
+    padding-right: 10.7rem;
 }
-.ui.selection.dropdown{
+
+.ui.selection.dropdown {
     min-width: 100%;
-    -webkit-border-radius:0;
-    -moz-border-radius:0;
-    border-radius:0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
 }
-.ui.selection.dropdown>.delete.icon, .ui.selection.dropdown>.dropdown.icon, .ui.selection.dropdown>.search.icon{
-    right:1.4rem;
+
+.ui.selection.dropdown > .delete.icon, .ui.selection.dropdown > .dropdown.icon, .ui.selection.dropdown > .search.icon {
+    right: 1.4rem;
 }
-.ui.default.dropdown:hover>.text, .ui.default.dropdown>.text, .ui.dropdown:hover>.default.text, .ui.dropdown>.default.text{
-    color:#000;
+
+.ui.default.dropdown:hover > .text, .ui.default.dropdown > .text, .ui.dropdown:hover > .default.text, .ui.dropdown > .default.text {
+    color: #000;
 }
-.ui.modal{
-    height:80%;
+
+.ui.modal {
+    height: 80%;
 }
-.ui.dimmer{
-    background:rgba(0,0,0,.5)!important;
+
+.modal img {
+    width: 100%;
+    height: 100%;
 }
-.modal img{
-    width:100%;
-    height:100%;
-}
+
 /*音乐*/
-#title{
-    position:absolute;
-    top:60px;
-    left:24px;
-    height:62px;
-    width:334px;
+#title {
+    position: absolute;
+    top: 60px;
+    left: 24px;
+    height: 62px;
+    width: 334px;
 }
 
-#download{
-    position:absolute;
-    top:132px;
-    left:30px;
-    text-decoration:none;
-    font-size:12px;
-    color:#999;
-    font-family:arial, sans-serif;
+#download {
+    position: absolute;
+    top: 132px;
+    left: 30px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #999;
+    font-family: arial, sans-serif;
 }
 
-#download:hover{
-    color:#fff;
+#download:hover {
+    color: #fff;
 }
+
 .choose {
     position: relative;
     display: inline-block;
@@ -87,23 +103,32 @@ body{
     text-indent: 0;
     line-height: 20px;
 }
+
 .choose input {
     position: absolute;
     left: 0;
     top: 0.5rem;
     opacity: 0;
 }
+
 .choose:hover {
     border-color: #000;
     color: #004974;
     text-decoration: none;
 }
-.ui.form input:not([type]), .ui.form input[type=text], .ui.form input[type=email], .ui.form input[type=search], .ui.form input[type=password], .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=tel], .ui.form input[type=time], .ui.form input[type=url], .ui.form input[type=number]{
+
+.ui.form input:not([type]), .ui.form input[type=text], .ui.form input[type=email], .ui.form input[type=search], .ui.form input[type=password], .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=tel], .ui.form input[type=time], .ui.form input[type=url], .ui.form input[type=number] {
     border: 1px solid #333;
 }
-.ui.form textarea{
+
+.ui.form textarea {
     border: 1px solid #333;
 }
-.ui.selection.dropdown{
+
+.ui.selection.dropdown {
     border: 1px solid #333;
+}
+
+.ui.selection.dropdown .menu {
+    max-height: 800px;
 }

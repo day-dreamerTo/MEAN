@@ -1,14 +1,16 @@
-<div class="ui sidebar vertical menu left thin visible">
+<div class="ui sidebar vertical menu left thin visible bgNone">
     <% if(user) { %>
-    <h2 class="ui header"><img src="/img/<%= user.avatar %>" class="ui circular image"></h2>
-    <div class="item" style="margin-bottom:2rem">
-        <p><%= user.name %> | <%= ({m: 'male', f: 'female', x: 'xx'})[user.gender] %></p>
+    <!--<img src="/img/<%= user.avatar %>" class="ui circular image">-->
+    <img src="/img/d33a00e9ce1e8e9e5504b5e060ba5b52.jpg" class="ui circular image tiny" style="margin-left: 10%">
+    <div class="item">
+        <h5><%= user.name %> | <%= ({m: 'male', f: 'female', x: 'xx'})[user.gender] %></h5>
         <p class=""><%= user.bio %></p>
     </div>
     <% } else { %>
-    <div class="item" style="margin-bottom:2rem">
-        <h3>day_dreamer</h3>
-        <p style="text-indent: 10px;">If you smile when no one else is around, you really mean it.</p>
+    <div class="item">
+        <img src="/img/d33a00e9ce1e8e9e5504b5e060ba5b52.jpg" class="ui circular image tiny" style="margin-left: 10%">
+        <h5>day_dreamer</h5>
+        <p style="">If you smile when no one else is around, you really mean it.</p>
     </div>
     <% } %>
     <a class="item" href="/gallery">
@@ -17,7 +19,7 @@
     <a class="item" href="/music">
         <i class="music icon"></i>My Music
     </a>
-    <div class="ui selection dropdown" style="border:none;">
+    <div class="ui selection dropdown bgNone" style="border:none;">
         <input type="hidden" name="gender">
         <i class="dropdown icon"></i>
         <div class="default text">My Themes</div>
@@ -25,7 +27,20 @@
             <div class="item" data-value="1">bg1</div>
             <div class="item" data-value="2">bg2</div>
             <div class="item" data-value="3">bg3</div>
-            <div class="item" data-value="5">bg4</div>
+            <div class="item" data-value="4">bg4</div>
+            <div class="item" data-value="5">bg5</div>
+            <div class="item" data-value="6">bg6</div>
+            <div class="item" data-value="7">bg7</div>
+            <div class="item" data-value="8">bg8</div>
         </div>
     </div>
+    <% if(user) { %>
+    <a class="item" href="/user/<%= user._id %>/edit">
+        <i class="sun icon"></i></i>Change Info
+    </a>
+    <a class="ui item" href="/signout"><i class="sign out  icon"></i>Logout </a>
+    <% } else {%>
+    <!--<a class="ui item" href="/signup">Sign Up </a>-->
+    <a class="ui item" href="/signin"><i class="sign in icon"></i>Sign In </a>
+    <% } %>
 </div>
